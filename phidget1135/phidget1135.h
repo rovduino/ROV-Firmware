@@ -7,8 +7,8 @@
 
 
 
-#ifndef Phidgets1135_h
-#define Phidgets1135_h
+#ifndef phidget1135_h
+#define phidget1135_h
 
 #include "WProgram.h"
 
@@ -20,7 +20,7 @@ class phidget1135
 	float getAVERAGE(unsigned int repeats);
 
   private:
-    float _phidgetSUM;
+    float _phidgetsSUM;
     int _pin;
     float _voltageIN;
     float _voltageOUT;

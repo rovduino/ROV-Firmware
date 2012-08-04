@@ -1,5 +1,5 @@
 /*
- phidgets1135.h
+ phidgets1135.cpp
  Phidgets 1135 Precision Voltage Sensor Arduino Library
  Written by: Greg Marchese & ROVduino
  Released under ROVduino License. Full license at http://rovduino.zerogx.net
@@ -17,7 +17,7 @@ phidget1135::phidget1135(int pin)
 float phidget1135::getVOLTAGE()
 {
     _voltageIN = map(analogRead(_pin),0,1023,0,999);
-    _voltageOUT = (((_voltageIN) / 200) - 2.48507 ) / 0.0681
+    _voltageOUT = (_voltageIN / 13.62) - 36.7107 + 0.22;
     return _voltageOUT;
 }
 
